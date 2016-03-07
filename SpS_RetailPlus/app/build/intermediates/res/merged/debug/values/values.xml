@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Aldrick/Google%20Drive/Software%20para%20Smart/SpS_RetailPlus/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Controle de Fantasias</string>
+    <!-- From: file:/C:/Users/Aldrick/Google%20Drive/Software%20para%20Smart/SpS_RetailPlus/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="NoActionBar" parent="@android:style/Theme.Holo.Light">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <!-- Product id (pid) - will be HIDDEN - used to pass to other activity -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome da Fantasia:"
+            android:id="@+id/textView"
+            android:textSize="18dip"
+            android:paddingTop="10dip"
+            android:paddingLeft="6dip"
+            android:paddingBottom="6dip" />
+
+        <TextView
+            android:id="@+id/nome"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:paddingBottom="6dip"
+            android:paddingTop="10dip"
+            android:paddingLeft="6dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tamanho da Fantasia:"
+            android:id="@+id/textView2"
+            android:textSize="18dip"
+            android:paddingLeft="6dip"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tamanho"
+            android:paddingLeft="6dip"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="18dip"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip" />
+
+    </LinearLayout>
+
+
+    <!-- Name Label -->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:paddingLeft="6dip"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip"
+            android:text="Sexo:"
+            android:id="@+id/textView5" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dip"
+            android:paddingLeft="6dip"
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip"
+            android:id="@+id/sexo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quant. em Estoque:"
+            android:id="@+id/textView3"
+            android:layout_gravity="center"
+            android:textSize="18dip"
+            android:paddingTop="6dip"
+            android:paddingLeft="6dip"
+            android:paddingBottom="6dip" />
+
+        <TextView
+            android:id="@+id/quantidade"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dip"
+            android:paddingLeft="6dip"
+            android:textSize="18dip"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:paddingBottom="6dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preço Unitário da Fantasia:"
+            android:id="@+id/textView4"
+            android:textSize="18dip"
+            android:paddingBottom="10dip"
+            android:paddingLeft="6dip"
+            android:paddingTop="6dip" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/preco"
+            android:textSize="18dip"
+            android:paddingTop="6dip"
+            android:paddingLeft="6dip"
+            android:paddingBottom="10dip" />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fantasiaId"
+        android:textSize="18dip"
+        android:paddingTop="6dip"
+        android:paddingLeft="6dip"
+        android:paddingBottom="10dip"
+        android:visibility="gone" />
+
+</LinearLayout>
