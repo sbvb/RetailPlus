@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
@@ -21,7 +22,8 @@ import java.util.List;
 
 public class NewSale2 extends Activity {
 
-
+	TextView txtProduto;
+	TextView txtCliente;
 	EditText txtQuantidade;
 
 	Button btnSave;
@@ -35,24 +37,17 @@ public class NewSale2 extends Activity {
 	// JSON parser class
 	JSONParser jsonParser = new JSONParser();
 	JSONParser jParser = new JSONParser();
-	// single product url
-	private static final String url_product_details = "http://54.69.170.202/servidor/sps_buscar_detalhes_produto.php";
 
-	// url to update product
-	private static final String url_product_update = "http://54.69.170.202/servidor/sps_atualizar_produto.php";
+	// url to update sale
+	private static final String url_sale_update = "http://54.69.170.202/servidor/sps_criar_venda.php";
 
 
 	// JSON Node names
 	private static final String TAG_SUCCESS = "success";
-	private static final String TAG_PRODUCT = "product";
-	private static final String TAG_ID = "clienteId";
-	private static final String TAG_NOME = "nome";
-	private static final String TAG_PRECO = "preco";
-	private static final String TAG_QUANTIDADE = "quantidade";
+
 
 	private static String nomeAux;
 	private static String precoAux;
-	private static String quantidadeAux;
 	private static String clienteId;
 	private static String nomeClienteAux;
 
@@ -61,22 +56,24 @@ public class NewSale2 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.newsale2);
 
-		// getting product details from intent
 		Intent i = getIntent();
-
-		// getting product id (pid) from intent
 
 		produtoId = i.getStringExtra("fantasiaId");
 		nomeAux = i.getStringExtra("nomeFantasia");
-		clienteId = i.getStringExtra("fantasiaId");
+		clienteId = i.getStringExtra("clienteId");
 		nomeClienteAux = i.getStringExtra("nomeCliente");
 		precoAux = i.getStringExtra("preco");
 
+		txtProduto = (TextView) findViewById(R.id.produto);
+		txtCliente = (TextView) findViewById(R.id.cliente);
+
+		txtProduto.setText("Produto: "+nomeAux);
+		txtCliente.setText("Cliente: "+nomeClienteAux);
 
 		// save button
 		btnSave = (Button) findViewById(R.id.btnSave);
 
-		// Getting complete product details in background thread
+
 
 		txtQuantidade = (EditText) findViewById(R.id.inputQuantidade);
 
@@ -93,15 +90,9 @@ public class NewSale2 extends Activity {
 
 	}
 
-
-	/**
-	 * Background Async Task to  Save product Details
-	 * */
 	class SaveSaleDetails extends AsyncTask<String, String, String> {
 
-		/**
-		 * Before starting background thread Show Progress Dialog
-		 * */
+
 		@Override
 		protected void onPreExecute() {
 			super.onPreExecute();
@@ -112,9 +103,7 @@ public class NewSale2 extends Activity {
 			pDialog.show();
 		}
 
-		/**
-		 * Saving product
-		 * */
+
 		protected String doInBackground(String... args) {
 			String quant = txtQuantidade.getText().toString();
 
@@ -126,22 +115,24 @@ public class NewSale2 extends Activity {
 			params.add(new BasicNameValuePair("quantidade", quant));
 
 			// getting JSON Object
-			// Note that create product url accepts POST method
-			JSONObject json = jsonParser.makeHttpRequest(url_product_update,"POST", params);
 
+			JSONObject json = jsonParser.makeHttpRequest(url_sale_update,"POST", params);
+
+			// Check your log cat for JSON reponse
+			Log.d("sale: ", json.toString());
 			// check for success tag
 			try {
 				int success = json.getInt(TAG_SUCCESS);
 
 				if (success == 1) {
-					// successfully created product
+
 					Intent i = new Intent(getApplicationContext(), MainScreenActivity.class);
 					startActivity(i);
 
-					// closing this screen
+
 					finish();
 				} else {
-					// failed to create product
+
 				}
 			} catch (JSONException e) {
 				e.printStackTrace();
@@ -151,11 +142,7 @@ public class NewSale2 extends Activity {
 		}
 
 
-		/**
-		 * After completing background task Dismiss the progress dialog
-		 * **/
 		protected void onPostExecute(String file_url) {
-			// dismiss the dialog once product uupdated
 			pDialog.dismiss();
 		}
 	}

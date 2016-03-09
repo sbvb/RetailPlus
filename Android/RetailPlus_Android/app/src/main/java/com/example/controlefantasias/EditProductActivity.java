@@ -71,7 +71,7 @@ public class EditProductActivity extends Activity {
 		// save button
 		btnSave = (Button) findViewById(com.example.controlefantasias.R.id.btnSave);
 
-		// Getting complete product details in background thread
+
 
 		txtNome = (EditText) findViewById(R.id.inputNome);
 		txtPreco = (EditText) findViewById(R.id.inputPreco);

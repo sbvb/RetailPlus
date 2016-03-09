@@ -14,7 +14,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome da Fantasia:"
+            android:text="Nome:"
             android:id="@+id/textView"
             android:textSize="18dip"
             android:paddingTop="10dip"
@@ -22,7 +22,7 @@
             android:paddingBottom="6dip" />
 
         <TextView
-            android:id="@+id/nome"
+            android:id="@+id/produto"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textSize="18dip"
@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tamanho da Fantasia:"
+            android:text="Cliente:"
             android:id="@+id/textView2"
             android:textSize="18dip"
             android:paddingLeft="6dip"
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tamanho"
+            android:id="@+id/cliente"
             android:paddingLeft="6dip"
             android:layout_weight="1"
             android:layout_gravity="center"
@@ -60,8 +60,6 @@
     </LinearLayout>
 
 
-    <!-- Name Label -->
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -74,7 +72,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="6dip"
             android:paddingBottom="6dip"
-            android:text="Sexo:"
+            android:text="data:"
             android:id="@+id/textView5" />
 
         <TextView
@@ -84,7 +82,7 @@
             android:paddingLeft="6dip"
             android:paddingTop="6dip"
             android:paddingBottom="6dip"
-            android:id="@+id/sexo" />
+            android:id="@+id/data" />
     </LinearLayout>
 
     <LinearLayout
@@ -95,24 +93,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quant. em Estoque:"
-            android:id="@+id/textView3"
-            android:layout_gravity="center"
+            android:text="Quantidade:"
+            android:id="@+id/textView2"
             android:textSize="18dip"
-            android:paddingTop="6dip"
             android:paddingLeft="6dip"
+            android:paddingTop="6dip"
             android:paddingBottom="6dip" />
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:id="@+id/quantidade"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="6dip"
             android:paddingLeft="6dip"
-            android:textSize="18dip"
-            android:textStyle="bold"
+            android:layout_weight="1"
             android:layout_gravity="center"
+            android:textSize="18dip"
+            android:paddingTop="6dip"
             android:paddingBottom="6dip" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -123,31 +121,26 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Preço Unitário da Fantasia:"
-            android:id="@+id/textView4"
+            android:text="Preco Total da venda:"
+            android:id="@+id/textView2"
             android:textSize="18dip"
-            android:paddingBottom="10dip"
             android:paddingLeft="6dip"
-            android:paddingTop="6dip" />
+            android:paddingTop="6dip"
+            android:paddingBottom="6dip" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/preco"
+            android:id="@+id/precoTotal"
+            android:paddingLeft="6dip"
+            android:layout_weight="1"
+            android:layout_gravity="center"
             android:textSize="18dip"
             android:paddingTop="6dip"
-            android:paddingLeft="6dip"
-            android:paddingBottom="10dip" />
+            android:paddingBottom="6dip" />
 
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/fantasiaId"
-        android:textSize="18dip"
-        android:paddingTop="6dip"
-        android:paddingLeft="6dip"
-        android:paddingBottom="10dip"
-        android:visibility="gone" />
 
-</LinearLayout><!-- From: file:/C:/Users/Aldrick/Downloads/UFRJ/SpS%20Github/RetailPlus/Android/RetailPlus_Android/app/src/main/res/layout/list_item.xml -->
+
+
+</LinearLayout>

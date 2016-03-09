@@ -5,9 +5,33 @@
 	android:orientation="vertical" >
 
 
+
+		<TextView
+			android:id="@+id/produto"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textSize="18dip"
+			android:paddingBottom="6dip"
+			android:paddingTop="10dip"
+			android:paddingLeft="6dip" />
+
+
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/cliente"
+			android:paddingLeft="10dip"
+			android:paddingRight="10dip"
+			android:paddingTop="10dip"
+			android:textSize="17dip" />
+
+
+
+
 	<TextView android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:text="Quantidade:"
+		android:text="Insira a quantidade da compra:"
 		android:paddingLeft="10dip"
 		android:paddingRight="10dip"
 		android:paddingTop="10dip"
@@ -28,14 +52,14 @@
 	<LinearLayout android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:orientation="horizontal">
-		<!-- Button Create Product -->
+
 		<Button android:id="@+id/btnSave"
 			android:layout_width="fill_parent"
 			android:layout_height="wrap_content"
-			android:text="Salvar Mudanças"
+			android:text="Finalizar Venda"
 			android:layout_weight="1"/>
 
 
 	</LinearLayout>
 
-</LinearLayout><!-- From: file:/C:/Users/Aldrick/Downloads/UFRJ/SpS%20Github/RetailPlus/SpS_RetailPlus/app/src/main/res/layout/newsale2.xml -->
+</LinearLayout><!-- From: file:/C:/Users/Aldrick/Downloads/UFRJ/SpS%20Github/RetailPlus/Android/RetailPlus_Android/app/src/main/res/layout/newsale2.xml -->

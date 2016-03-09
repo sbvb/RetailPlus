@@ -66,5 +66,16 @@ public class MainScreenActivity extends Activity{
 
 			}
 		});
+
+		btnViewSales.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				Intent i = new Intent(getApplicationContext(), AllSales.class);
+				startActivity(i);
+
+			}
+		});
+
 	}
 }

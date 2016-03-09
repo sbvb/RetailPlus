@@ -71,7 +71,11 @@
             android:label="New Sale 1" >
         </activity>
         <activity
-            android:name="com.example.controlefantasias.NewSale1"
+            android:name="com.example.controlefantasias.NewSale2"
+            android:label="New Sale 2" >
+        </activity>
+        <activity
+            android:name="com.example.controlefantasias.AllSales"
             android:label="New Sale 1" >
         </activity>
     </application>
